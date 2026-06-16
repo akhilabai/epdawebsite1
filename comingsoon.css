@@ -1,0 +1,114 @@
+
+
+/* Page background */
+.full_body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(120deg, #ffffff, rgba(169, 204, 255, 0.25));
+}
+
+/* CARD ROW */
+.notify-row {
+    position: relative;
+    background: #fff;
+    border-radius: 28px;
+   
+    z-index: 1;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+}
+
+/* SOFT GLOW SHADOW */
+.notify-row::before {
+    content: "";
+    position: absolute;
+    inset: -50px;
+    background:
+        radial-gradient(circle at top left,
+            rgba(0, 89, 169, 0.35),
+            transparent 19%),
+        radial-gradient(circle at bottom right,
+            rgba(140, 35, 101, 0.35),
+            transparent 40%);
+    border-radius: 40px;
+    filter: blur(45px);
+    z-index: -1;
+}
+
+/* LEFT CONTENT */
+.notify-wrapper {
+    padding: 40px 0 30px 10px;
+    animation: fadeSlide 1s ease forwards;
+}
+
+.coming-soon {
+    display: inline-block;
+    font-size: 14px;
+    color: #0059a9;
+    margin-bottom: 14px;
+}
+
+/* Heading */
+.notify-wrapper h1 {
+    font-size: 38px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 30px;
+    color: #8c2365;
+}
+
+/* Email box */
+.notify-box {
+    display: flex;
+    align-items: center;
+    border: 2px solid #0059a9;
+    border-radius: 50px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.notify-box input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.notify-box button {
+    border: none;
+    background: #0059a9;
+    color: #fff;
+    padding: 14px 28px;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 50px;
+    margin: 4px;
+    animation: pulse 2s infinite;
+}
+
+/* Small text */
+.notify-wrapper small {
+    display: block;
+    margin-top: 14px;
+    font-size: 13px;
+    color: #444;
+}
+
+/* Animations */
+@keyframes fadeSlide {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}

@@ -1,0 +1,50 @@
+
+    .gaja-features {
+      max-width: 720px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .gaja-features li {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    }
+
+    .gaja-features li:last-child {
+      border-bottom: none;
+    }
+
+    /* Custom green checkmark */
+    .gaja-features .check {
+      flex: 0 0 28px;
+      height: 28px;
+      display: inline-grid;
+      place-items: center;
+      font-size: 18px;
+      color: #0059a9;
+      /* ✅ green color */
+      font-weight: bold;
+      background: #e9f1f8;
+      border-radius: 8px;
+    }
+
+    .gaja-features .content {
+      flex: 1 1 auto;
+      line-height: 1.35;
+    }
+
+    .gaja-features .title {
+      font-weight: 600;
+      display: block;
+    }
+
+    .gaja-features .desc {
+      display: block;
+      color: #374151;
+      font-size: 0.96rem;
+      margin-top: 2px;
+    }

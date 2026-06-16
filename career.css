@@ -1,0 +1,117 @@
+  .job-row {
+        border-bottom: 2px dashed #c9c9c9;
+        padding: 21px 0;
+        border-radius: 15px;
+        transition: all 0.3s ease;
+        align-items: stretch; /* Ensures columns match height */
+    }
+
+    .job-row:hover {
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+        background-color: #f9f9f9;
+        transform: translateY(-3px);
+    }
+
+    .job-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+    }
+
+    .requirement-badge {
+        display: inline-flex;
+        align-items: center;
+        background: #e8f0ff;
+        color: #0059a9;
+        padding: 6px 12px;
+        border-radius: 25px;
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 8px;
+        transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .requirement-badge i {
+        margin-right: 6px;
+        font-size: 15px;
+    }
+
+    .requirement-badge:hover {
+        background: #0059a9;
+        color: #fff;
+    }
+.job_title{
+    color: #0059a9;
+}
+
+.animated-btn {
+    background-color: #0059a9;       /* Main button color */
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+}
+
+.animated-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255,255,255,0.2), rgba(255,255,255,0.6), rgba(255,255,255,0.2));
+    transform: skewX(-20deg);
+    transition: all 0.5s ease;
+}
+
+.animated-btn:hover::after {
+    left: 200%;
+}
+
+.animated-btn:hover {
+    transform: scale(1.05);   /* slight zoom effect */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+/* Hide default file input */
+.custom-file-input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Custom file label styling */
+.custom-file-label {
+    display: block;
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    font-size: 1rem;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+/* On hover */
+.custom-file-label:hover {
+    border-color: #0059a9;
+    box-shadow: 0 0 6px rgba(0, 89, 169, 0.3);
+}
+
+/* Show file name after selection */
+.custom-file-input:valid + .custom-file-label::after {
+    content: attr(data-file-name);
+    color: #0059a9;
+    font-weight: 500;
+}
+
